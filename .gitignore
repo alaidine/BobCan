@@ -367,3 +367,7 @@ vcpkg_installed/
 
 # Aseprite
 *.aseprite
+
+# Releease
+*.zip
+BobCanRelease/
