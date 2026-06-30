@@ -1,6 +1,6 @@
 # BobCan
 
-<img src="Resources/Logo.png" alt="logo" width="200" style="image-rendering: pixelated;" />
+<img src="Resources/LogoLarge.png" alt="logo" width="256" />
 
 Game made for the the SkillTree GameJam. <a href="https://aalaaiddine.itch.io/bobcan">Here is the itch.io page.</a>
 
