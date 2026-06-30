@@ -365,6 +365,13 @@ FodyWeavers.xsd
 # Vcpkg
 vcpkg_installed/
 
+# CMake build directories
+build/
+[Bb]uild*/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+
 # Aseprite
 *.aseprite
 
