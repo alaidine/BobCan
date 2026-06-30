@@ -10,9 +10,7 @@ First compile or get it from the <a href="https://aalaaiddine.itch.io/bobcan">it
 
 ### On Windows (Visual Studio)
 
-```
-# Open BobCan.sln and build (x64).
-```
+Open BobCan.sln and build (x64), vcpkg.exe should be available in path.
 
 ### With CMake (Linux / cross-platform)
 
