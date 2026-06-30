@@ -31,7 +31,7 @@ Then build and run:
 
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
-cmake --build build -j
+cmake --build build
 cd build && ./BobCan        # run from where the Resources folder was copied
 ```
 
