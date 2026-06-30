@@ -9,7 +9,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # on les recupere et on les compile via FetchContent.
 include(FetchContent)
 
-# --- SFML 3 -----------------------------------------------------------------
 # On ne compile que ce dont le jeu a besoin (graphics/window/system).
 set(SFML_BUILD_AUDIO   OFF CACHE BOOL "" FORCE)
 set(SFML_BUILD_NETWORK OFF CACHE BOOL "" FORCE)
@@ -22,7 +21,6 @@ FetchContent_Declare(SFML
     GIT_SHALLOW    ON
 )
 
-# --- spdlog -----------------------------------------------------------------
 # spdlog embarque sa propre copie de {fmt}, donc rien d'autre a installer.
 FetchContent_Declare(spdlog
     GIT_REPOSITORY https://github.com/gabime/spdlog.git
@@ -32,7 +30,6 @@ FetchContent_Declare(spdlog
 
 FetchContent_MakeAvailable(SFML spdlog)
 
-# --- Jeu --------------------------------------------------------------------
 add_executable(BobCan BobCan/Main.cpp)
 
 target_link_libraries(BobCan PRIVATE

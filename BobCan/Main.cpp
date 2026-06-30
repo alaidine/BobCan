@@ -238,8 +238,6 @@ struct Game
 		return player.has(n.prereq);
 	}
 
-	// ----- Boucle de jeu -----
-
 	void updatePlaying(sf::RenderWindow& window)
 	{
 		// Deplacement horizontal (WALK est toujours acquise).
@@ -304,7 +302,6 @@ struct Game
 
 	void updateBullets()
 	{
-		// Projectiles de Bob -> degats au boss.
 		for (auto it = player.bullets.begin(); it != player.bullets.end(); )
 		{
 			it->position += it->direction * it->speed;
@@ -325,7 +322,6 @@ struct Game
 			it = remove ? player.bullets.erase(it) : it + 1;
 		}
 
-		// Projectiles du boss -> degats a Bob (bloques si le bouclier est actif).
 		for (auto it = boss.bullets.begin(); it != boss.bullets.end(); )
 		{
 			it->position += it->direction * it->speed;
@@ -361,7 +357,6 @@ struct Game
 			die();
 	}
 
-	// Bob meurt : il ressuscite, gagne un point et l'arbre s'ouvre. Le boss repart a fond.
 	void die()
 	{
 		skillPoints++;
@@ -421,8 +416,6 @@ struct Game
 		state = GameState::Intro;
 	}
 
-	// ----- Entrees -----
-
 	void onKeyPressed(sf::Keyboard::Key key, sf::RenderWindow& window)
 	{
 		switch (state)
@@ -472,8 +465,6 @@ struct Game
 			dir = { 1.0f, 0.0f };
 		player.bullets.emplace_back(playerCenter(), dir, PLAYER_BULLET_SPEED, sf::Color::Red);
 	}
-
-	// ----- Rendu -----
 
 	void centerX(sf::Text& t, float y)
 	{
